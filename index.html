@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Reto Semanal 003</title>
+    <style>
+        #pantallaDetalle, #pantallaListado{
+            display: none;
+        }
+        #botonCarga{
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            border-radius: 50%;
+        }
+
+        header{
+            background: #4900FF;
+            height: 85px;
+        }
+
+        #pantallaVacio{
+            text-align: center;
+            padding: 70px;
+        }
+
+        .pantallaVacio_emoji{
+            font-size: 200px;
+        }
+
+        .pantallaListado_icono{
+            width: 40px;
+            margin-right: 6px;
+        }
+        
+        #pantallaDetalle{
+            padding: 50px;
+            text-align: center;
+        }
+        
+        .pantallaDetalle_Icono{
+            width: 250px;
+        }
+        
+        
+        
+        
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <p>Listado de compras</p>
+    </header>
+<section id="pantallaVacio">
+    <h1 class="pantallaVacio_titulo">Aun no tienes nada para comprar</h1>
+    <h1 class="pantallaVacio_emoji">😢</h1>
+</section>
+
+
+
+<section id="pantallaListado">
+    <ul class="list-group" id="pantallaListadoLista">
+    </ul>
+</section>
+
+
+
+<section id="pantallaDetalle">
+    <img src="images/005-carne.svg" alt="" class="pantallaDetalle_icono" id="pantallaDetalleIcono">
+    <h1 id="pantallaDetalleProducto">Bife de chorizo</h1>
+    <p id="pantallaDetalleInfo">sigo comiendo carne no me impogta nada</p>
+    <button id="pantallaDetalleCerrar">Cerrar</button>
+</section>
+
+
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pantallaCarga" id="botonCarga">
+    Add+
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="pantallaCarga" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Agregar productos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="pantallaCargaProducto" class="form-label">Ingresa tu producto</label>
+                <input type="text" class="form-control" id="pantallaCargaProducto" placeholder="Leche/Carne">
+            </div>
+                
+            <div class="mb-3">
+                    <label for="pantallaCargaIcono" class="form-label">Selecciona Categoria</label>
+                    <select id="pantallaCargaIcono" class="form-select">
+                    <option value="images/005-carne.svg">Carnes</option>
+                    <option value="images/006-botella-de-leche.svg">Lacteos</option>
+                    <option value="images/007-vegetal.svg">Vegetales</option>
+                    <option value="images/004-bebidas-sin-alcohol.svg">Bebidas</option>
+                    <option value="images/008-frutas.svg" alt="Frutas">Frutas</option>
+                    <option value="images/003-alimentos-enlatados.svg">Enlatados</option>
+                    <option value="images/009-especia.svg">Especies</option>
+                    <option value="images/002-limpieza.svg">Limpieza</option>
+                    <option value="images/010-mascota.svg">Mascotas</option>
+                    <option value="images/001-tienda-de-vveres.svg">Viveres</option>
+            </div>
+        </select>
+            <div class="mb-3">
+                <label for="pantallaCargaInfo" class="form-label">Agrega detalles de tu compra</label>
+                <textarea class="form-control" id="pantallaCargaInfo" rows="3"></textarea>
+            
+            </div>
+                
+            
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="pantallaCargaAdd">Agregar y Guardar</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <script src="scripts/mains.js">
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
